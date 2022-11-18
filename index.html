@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script
       src="https://kit.fontawesome.com/4678b1f6f8.js"
@@ -16,6 +21,10 @@
           extend: {
             colors: {
               background: '#181b29',
+              lighter: '#1b1e2e',
+            },
+            fontFamily: {
+              sans: ['Montserrat', ...tailwind.defaultTheme.fontFamily.sans],
             },
           },
         },
@@ -37,23 +46,26 @@
         </a>
       </nav>
     </header>
-    <main class="flex flex-col flex-grow">
-      <section class="flex flex-col justify-center items-start flex-grow px-10">
+    <main class="flex flex-col overflow-x-hidden">
+      <section
+        id="intro"
+        class="relative flex flex-col min-h-screen justify-center items-start px-10">
         <h1
-          class="inline transition-all duration-500 text-5xl md:text-7xl lg:text-9xl font-medium select-none text-transparent -translate-y-4 hover:-translate-y-10 hover:text-white">
+          class="transition-all duration-500 text-5xl md:text-7xl lg:text-9xl font-medium select-none md:text-transparent -translate-y-4 hover:-translate-y-12 hover:text-white">
           <span
             class="transition-all duration-500 text-gray-400 hover:text-white"
             >Ilham<br />
             <span class="pl-1">Ferdian</span><br />
             <span class="pl-2">Rudianata</span><br />
           </span>
-          <span class="block text-lg">
+          <span class="block text-lg pt-3">
             I'm a mobile developer based in Indonesia.<br />
             Dreams to be a 10x dev
           </span>
         </h1>
-        <div class="absolute bottom-0 left-[50vw] py-2">
+        <div class="absolute bottom-16 left-[50vw] -translate-x-[50%] py-2">
           <lottie-player
+            id="scrolldown"
             src="https://assets10.lottiefiles.com/packages/lf20_w9R8d4r74n.json"
             background="transparent"
             speed="1"
@@ -62,6 +74,66 @@
             autoplay></lottie-player>
         </div>
       </section>
+      <section
+        id="work"
+        class="flex flex-col bg-lighter justify-center min-h-screen px-4 gap-4 md:px-20">
+        <h2
+          class="font-sans text-4xl font-semibold text-gray-400 py-4 md:py-10">
+          My Work
+        </h2>
+        <div class="md:blur-[1px] hover:blur-0 px-4 md:px-32">
+          <h3 class="font-sans text-gray-400">Aplikasi Hidroponik Pintar</h3>
+          <img
+            class="transition-all duration-500 md:grayscale hover:grayscale-0"
+            src="img/work1.png"
+            alt="Aplikasi Hidroponik Pintar Image" />
+        </div>
+        <div class="md:blur-[1px] hover:blur-0 px-4 md:px-32">
+          <h3 class="font-sans text-gray-400">E-MINT Research</h3>
+          <img
+            class="transition-all duration-500 md:grayscale hover:grayscale-0"
+            src="img/work2.png"
+            alt="E-Mint Research Image" />
+        </div>
+        <div class="md:blur-[1px] hover:blur-0 px-4 md:px-32">
+          <h3 class="font-sans text-gray-400">AR Game</h3>
+          <img
+            class="transition-all duration-500 md:grayscale hover:grayscale-0"
+            src="img/work3.png"
+            alt="AR Game Image" />
+        </div>
+        <h2
+          class="font-sans text-center text-4xl text-gray-400 py-2 pb-4 md:pb-10">
+          And many more..
+        </h2>
+      </section>
     </main>
+    <footer class="flex flex-col min-h-screen">
+      <h2 class="font-sans text-center mt-20">You've reached the end</h2>
+      <div class="flex flex-col flex-grow justify-center px-4 md:px-20">
+        <h2 class="text-xl font-bold">You can contact me at</h2>
+        <div class="flex flex-col items-start gap-1 py-3">
+          <a
+            href="mailto://ilhamferdian88@gmail.com"
+            target="_blank"
+            class="font-semibold from-[#74F2CE] to-[#7CFFCB] hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r">
+            <i class="fa-regular fa-envelope"></i> ilhamferdian88@gmail.com
+          </a>
+          <a
+            href="https://twitter.com/itsfeeeeerdi"
+            target="_blank"
+            class="font-semibold from-[#006bf7] to-[#02b7b3] hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r">
+            <i class="fa-brands fa-twitter"></i> @itsfeeeeerdi
+          </a>
+          <a
+            href="https://twitter.com/itsfeeeeerdi"
+            target="_blank"
+            class="font-semibold from-[#5b69e6] to-[#f8353c] hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r">
+            <i class="fa-brands fa-instagram"></i> @itsfeeeeerdi
+          </a>
+        </div>
+      </div>
+      <h2 class="font-sans text-center mb-4">Thank You 🙏</h2>
+    </footer>
   </body>
 </html>
