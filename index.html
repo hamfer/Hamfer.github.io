@@ -1,12 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hamfer's site</title>
-</head>
-<body>
-  <h1>Hello world!</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://kit.fontawesome.com/4678b1f6f8.js"
+      crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              background: '#181b29',
+            },
+          },
+        },
+      };
+    </script>
+    <script defer src="script.js"></script>
+    <title>Hamfer's site</title>
+  </head>
+  <body class="flex flex-col min-h-screen bg-background text-white font-sans">
+    <header
+      id="header"
+      class="transition-all z-10 border-white/5 py-1 sticky top-0 px-3">
+      <nav class="flex items-center justify-end">
+        <a
+          href="https://github.com/Hamfer"
+          target="_blank"
+          class="rounded-full transition-all duration-500 px-2 py-1 text-gray-400 hover:bg-black/50 hover:text-white">
+          <i class="fab fa-github text-3xl"></i>
+        </a>
+      </nav>
+    </header>
+    <main class="flex flex-col flex-grow">
+      <section class="flex flex-col justify-center items-start flex-grow px-10">
+        <h1
+          class="inline transition-all duration-500 text-5xl md:text-7xl lg:text-9xl font-medium select-none text-transparent -translate-y-4 hover:-translate-y-10 hover:text-white">
+          <span
+            class="transition-all duration-500 text-gray-400 hover:text-white"
+            >Ilham<br />
+            <span class="pl-1">Ferdian</span><br />
+            <span class="pl-2">Rudianata</span><br />
+          </span>
+          <span class="block text-lg">
+            I'm a mobile developer based in Indonesia.<br />
+            Dreams to be a 10x dev
+          </span>
+        </h1>
+        <div class="absolute bottom-0 left-[50vw] py-2">
+          <lottie-player
+            src="https://assets10.lottiefiles.com/packages/lf20_w9R8d4r74n.json"
+            background="transparent"
+            speed="1"
+            style="width: 60px; height: 60px"
+            loop
+            autoplay></lottie-player>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
