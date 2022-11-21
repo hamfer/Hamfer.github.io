@@ -4,7 +4,7 @@ const scrolldownIcon = document.getElementById('scrolldown');
 
 const navStyles = ['bg-gray-600/5', 'border-b', 'backdrop-blur'];
 
-document.addEventListener('scroll', (e) => {
+document.addEventListener('scroll', e => {
   const scrolled = this.scrollY;
   const scrolledP = (this.innerHeight - this.scrollY) / this.innerHeight;
   intro.style.transform = `translateX(${scrolled}px)`;
