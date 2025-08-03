@@ -1,140 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="/img/favicon.ico" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
-      rel="stylesheet" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script
-      src="https://kit.fontawesome.com/4678b1f6f8.js"
-      crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              background: '#181b29',
-              lighter: '#1b1e2e',
-            },
-            fontFamily: {
-              sans: ['Montserrat', ...tailwind.defaultTheme.fontFamily.sans],
-            },
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/img/favicon.ico" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/4678b1f6f8.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            background: '#181b29',
+            lighter: '#1b1e2e',
+          },
+          fontFamily: {
+            sans: ['Montserrat', ...tailwind.defaultTheme.fontFamily.sans],
           },
         },
-      };
-    </script>
-    <script defer src="script.js"></script>
-    <title>Hamfer's site</title>
-  </head>
-  <body class="flex flex-col min-h-screen bg-background text-white font-sans">
-    <header
-      id="header"
-      class="transition-all z-10 border-white/5 py-1 sticky top-0 px-3">
-      <nav class="flex items-center justify-end">
-        <a
-          href="https://github.com/Hamfer"
-          target="_blank"
-          class="rounded-full transition-all duration-500 px-2 py-1 text-gray-400 hover:bg-black/50 hover:text-white">
-          <i class="fab fa-github text-3xl"></i>
-        </a>
-      </nav>
-    </header>
-    <main class="flex flex-col overflow-x-hidden">
-      <section
-        id="intro"
-        class="relative transition-all duration-700 ease-out flex flex-col min-h-screen justify-center items-start px-10">
+      },
+    };
+  </script>
+  <script defer src="script.js"></script>
+  <title>Hamfer's site</title>
+</head>
+
+<body class="flex flex-col min-h-screen bg-background text-white font-sans">
+  <header id="header" class="transition-all z-10 border-white/5 py-1 sticky top-0 px-3">
+    <nav class="flex items-center justify-end">
+      <a href="https://github.com/Hamfer" target="_blank"
+        class="flex items-center gap-2 rounded-full transition-all duration-500 px-3 py-2 text-gray-400 hover:bg-black/50 hover:text-white">
+        <i class="fab fa-github text-lg md:text-xl lg:text-3xl"></i>
+        Github
+      </a>
+    </nav>
+  </header>
+  <main class="flex flex-col overflow-x-hidden">
+    <section id="intro"
+      class="relative transition-all duration-700 ease-out flex flex-col min-h-screen justify-center items-start px-10">
+      <div class="group transition-all duration-500 font-medium pb-0 md:hover:pb-24">
         <h1
-          class="transition-all duration-500 text-5xl md:text-7xl lg:text-9xl font-medium select-none md:text-transparent -translate-y-4 hover:-translate-y-12 hover:text-white">
-          <span
-            class="transition-all duration-500 text-gray-400 hover:text-white"
-            >Ilham<br />
-            <span class="pl-1">Ferdian</span><br />
-            <span class="pl-2">Rudianata</span><br />
-          </span>
-          <span class="block text-lg pt-3">
-            I'm a mobile developer based in Indonesia.<br />
-            Dreams to be a 10x dev
-          </span>
+          class="transition-all duration-500 text-white md:text-gray-400 text-3xl md:text-5xl lg:text-7xl md:group-hover:text-white">
+          Ilham<br />Ferdian<br />Rudianata
         </h1>
-        <div class="absolute bottom-16 left-[50vw] -translate-x-[50%] py-2">
-          <lottie-player
-            id="scrolldown"
-            src="https://assets10.lottiefiles.com/packages/lf20_w9R8d4r74n.json"
-            background="transparent"
-            speed="1"
-            style="width: 60px; height: 60px"
-            loop
-            autoplay></lottie-player>
-        </div>
-      </section>
-      <section
-        id="work"
-        class="flex flex-col bg-lighter justify-center min-h-screen px-4 gap-4 md:px-20">
-        <h2
-          class="font-sans text-4xl font-semibold text-gray-400 py-4 md:py-10">
-          My Work
-        </h2>
-        <div class="px-4 md:px-32">
-          <h3 class="font-sans text-gray-400">Aplikasi Hidroponik Pintar</h3>
+        <h3
+          class="transition-all duration-500 text-gray-400 md:text-gray-40/30 md:group-hover:text-gray-400 text-sm md:text-md lg:text-lg pt-3">
+          I'm a ["<span class="text-amber-500">Java</span>", "<span class="text-[#61DBFB]">React Native</span>", "<span
+            class="text-[#3DDC84]">Android</span>"] developer based in Indonesia 🇮🇩.<br />
+          Not a <b class="text-green-100">10x developer</b>, but I strive to be a <b class="text-green-300">1.1x
+            developer</b> every day.
+        </h3>
+      </div>
+    </section>
+    <div class="absolute bottom-4 left-[50vw] -translate-x-[50%] py-2">
+      <lottie-player id="scrolldown" src="https://assets10.lottiefiles.com/packages/lf20_w9R8d4r74n.json"
+        background="transparent" speed="1" style="width: 60px; height: 60px" loop autoplay></lottie-player>
+    </div>
+    <section id="work" class="flex flex-col bg-lighter justify-center min-h-screen px-4 gap-8 md:px-20 py-8">
+      <h2 class="font-sans text-4xl font-semibold text-center text-gray-300 py-4 md:py-10 tracking-tight">
+        My Work
+      </h2>
+      <div class="flex flex-col gap-8 *:flex *:flex-col">
+        <a href="https://plugins.jetbrains.com/plugin/23199-bracket-block"
+          class="group bg-background/80 rounded-2xl shadow-lg p-6 flex items-center lg:gap-8 transition-transform hover:scale-105 hover:shadow-2xl">
           <img
-            class="transition-all duration-500 md:grayscale hover:grayscale-0 md:blur-[1px] hover:blur-0"
-            src="img/work1.png"
-            alt="Aplikasi Hidroponik Pintar Image" />
-        </div>
-        <div class="px-4 md:px-32">
-          <h3 class="font-sans text-gray-400">E-MINT Research</h3>
+            class="w-full lg:px-52 rounded-xl mb-4 md:mb-0 transition-all duration-500 lg:grayscale group-hover:grayscale-0 lg:blur-[1px] group-hover:blur-0"
+            src="img/work-bracket-block.png" alt="Bracket Block Image" />
+          <div class="flex gap-4">
+
+            <h3 class="font-sans text-2xl font-bold text-white mb-2">Bracket Block</h3>
+            <img class="h-5" src="https://img.shields.io/jetbrains/plugin/d/23199-bracket-block.svg" />
+            <!-- <p class="text-gray-400">A smart hydroponics app for monitoring and automating plant growth, featuring real-time data and remote control.</p> -->
+          </div>
+        </a>
+        <div
+          class="group bg-background/80 rounded-2xl shadow-lg p-6 flex items-center lg:gap-8 transition-transform hover:scale-105 hover:shadow-2xl">
           <img
-            class="transition-all duration-500 md:grayscale hover:grayscale-0 md:blur-[1px] hover:blur-0"
-            src="img/work2.png"
-            alt="E-Mint Research Image" />
+            class="w-full lg:px-52 rounded-xl mb-4 md:mb-0 transition-all duration-500 lg:grayscale group-hover:grayscale-0 lg:blur-[1px] group-hover:blur-0"
+            src="img/work1.png" alt="Aplikasi Hidroponik Pintar Image" />
+          <div>
+            <h3 class="font-sans text-2xl font-bold text-white mb-2">Aplikasi Hidroponik Pintar</h3>
+            <!-- <p class="text-gray-400">A smart hydroponics app for monitoring and automating plant growth, featuring real-time data and remote control.</p> -->
+          </div>
         </div>
-        <div class="px-4 md:px-32">
-          <h3 class="font-sans text-gray-400">AR Game</h3>
+        <div
+          class="group bg-background/80 rounded-2xl shadow-lg p-6 flex items-center lg:gap-8 transition-transform hover:scale-105 hover:shadow-2xl">
           <img
-            class="transition-all duration-500 md:grayscale hover:grayscale-0 md:blur-[1px] hover:blur-0"
-            src="img/work3.png"
-            alt="AR Game Image" />
+            class="w-full lg:px-52 rounded-xl mb-4 md:mb-0 transition-all duration-500 lg:grayscale group-hover:grayscale-0 lg:blur-[1px] group-hover:blur-0"
+            src="img/work2.png" alt="E-Mint Research Image" />
+          <div>
+            <h3 class="font-sans text-2xl font-bold text-white mb-2">E-MINT Research</h3>
+            <!-- <p class="text-gray-400">Research project on mobile-integrated IoT for environmental monitoring and intelligent notifications.</p> -->
+          </div>
         </div>
-        <h2
-          class="font-sans text-center text-4xl text-gray-400 py-2 pb-4 md:pb-10">
-          And many more..
-        </h2>
-      </section>
-    </main>
-    <footer class="flex flex-col min-h-screen">
-      <h2 class="font-sans text-center mt-20">You've reached the end</h2>
-      <div class="flex flex-col flex-grow justify-center px-4 md:px-20">
-        <h2 class="text-xl font-bold">You can contact me at</h2>
-        <div class="flex flex-col items-start gap-1 py-3">
-          <a
-            href="mailto://ilhamferdian88@gmail.com"
-            target="_blank"
-            class="transition-all duration-500 font-semibold from-[#74F2CE] to-[#7CFFCB] bg-white bg-clip-text hover:text-transparent hover:bg-gradient-to-r">
-            <i class="fa-regular fa-envelope"></i> ilhamferdian88@gmail.com
-          </a>
-          <a
-            href="https://twitter.com/itsfeeeeerdi"
-            target="_blank"
-            class="transition-all duration-500 font-semibold from-[#006bf7] to-[#02b7b3] bg-white bg-clip-text hover:text-transparent hover:bg-gradient-to-r">
-            <i class="fa-brands fa-twitter"></i> @itsfeeeeerdi
-          </a>
-          <a
-            href="https://instagram.com/itsfeeeeerdi"
-            target="_blank"
-            class="transition-all duration-500 font-semibold from-[#5b69e6] to-[#f8353c] bg-white bg-clip-text hover:text-transparent hover:bg-gradient-to-r">
-            <i class="fa-brands fa-instagram"></i> @itsfeeeeerdi
-          </a>
+        <div
+          class="group bg-background/80 rounded-2xl shadow-lg p-6 flex items-center lg:gap-8 transition-transform hover:scale-105 hover:shadow-2xl">
+          <img
+            class="w-full lg:px-52 rounded-xl mb-4 md:mb-0 transition-all duration-500 lg:grayscale group-hover:grayscale-0 lg:blur-[1px] group-hover:blur-0"
+            src="img/work3.png" alt="AR Game Image" />
+          <div>
+            <h3 class="font-sans text-2xl font-bold text-white mb-2">AR Game</h3>
+            <!-- <p class="text-gray-400">An augmented reality mobile game blending real-world interaction with digital gameplay for immersive experiences.</p> -->
+          </div>
         </div>
       </div>
-      <h2 class="font-sans text-center mb-4">Thank You 🙏</h2>
-    </footer>
-  </body>
+      <div class="flex flex-col items-center mt-8">
+        <div class="w-24 h-1 bg-gradient-to-r from-[#74F2CE] to-[#7CFFCB] rounded-full mb-4"></div>
+        <h2 class="font-sans text-center text-3xl text-gray-400 py-2 pb-4 md:pb-10 animate-pulse">
+          ...and many more!
+        </h2>
+      </div>
+    </section>
+  </main>
+  <footer class="flex flex-col min-h-screen">
+    <h2 class="font-sans text-center mt-20">You've reached the end</h2>
+    <div class="flex flex-col flex-grow justify-center px-4 md:px-20">
+      <h2 class="text-xl font-bold">You can contact me at</h2>
+      <div
+        class="flex flex-col items-start gap-1 py-3 *:transition-all *:duration-500 *:font-semibold *:md:text-gray-200 *:md:bg-white *:bg-clip-text">
+        <a href="mailto:ilhamferdian88@gmail.com" target="_blank"
+          class="from-[#74F2CE] to-[#7CFFCB] md:hover:text-transparent md:hover:bg-gradient-to-r text-transparent bg-gradient-to-r">
+          <i class="fa-regular fa-envelope"></i> ilhamferdian88@gmail.com
+        </a>
+        <a href="https://x.com/itsfeeeeerdi" target="_blank"
+          class="from-[#006bf7] to-[#02b7b3] md:hover:text-transparent md:hover:bg-gradient-to-r text-transparent bg-gradient-to-r">
+          <i class="fa-brands fa-x-twitter"></i> @itsfeeeeerdi
+        </a>
+        <a href="https://instagram.com/itsfeeeeerdi" target="_blank"
+          class="from-[#5b69e6] to-[#f8353c] md:hover:text-transparent md:hover:bg-gradient-to-r text-transparent bg-gradient-to-r">
+          <i class="fa-brands fa-instagram"></i> @itsfeeeeerdi
+        </a>
+      </div>
+    </div>
+    <h2 class="font-sans text-center mb-4">Thank You 🙏</h2>
+  </footer>
+</body>
+
 </html>
